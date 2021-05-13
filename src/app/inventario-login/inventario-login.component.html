@@ -1,0 +1,29 @@
+<mat-card class="card-login">
+    <div class="contenedor-login">
+        <img class="img-login" src="../../assets/Imagenes/—Pngtree—user login or authenticate icon_5089976.png" alt="Logo de login">
+        <h1>Login Inventarios</h1>  
+        <form [formGroup]="Formulario" class="formulario-login">
+            <mat-form-field appearance="legacy" class="login-control">
+                <mat-label>Usuario</mat-label>
+                <input matInput placeholder="Ej: usuario@inventarios.com" formControlName="user">
+                <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+                <mat-hint>Hint</mat-hint> -->
+                <mat-error *ngIf="Formulario.controls.user.hasError('required')">
+                    El usuario es requerido
+                </mat-error>
+            </mat-form-field>
+
+            <mat-form-field appearance="legacy" class="login-control">
+                <mat-label>Password</mat-label>
+                <input matInput placeholder="Ingrese contraseña" type="password" formControlName="password">
+                <mat-error *ngIf="Formulario.controls.password.hasError('required')">
+                    La contraseña es requerida
+                </mat-error>
+                <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+                <mat-hint>Hint</mat-hint> -->
+            </mat-form-field>
+
+            <button mat-raised-button color="primary" (click)="LoginIn()">Ingresar</button>
+        </form>
+    </div>
+</mat-card>

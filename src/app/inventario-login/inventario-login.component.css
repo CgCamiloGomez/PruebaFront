@@ -1,0 +1,38 @@
+.card-login .contenedor-login{
+    display: contents;
+}
+.card-login{
+    width: 450px;
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-login .contenedor-login .img-login{
+    width: 150px;
+    height: 150px;
+    border-radius: 100px;
+    margin: 0 auto;
+    position: relative;
+    position: relative;
+    bottom: 50px;
+}
+
+.card-login .contenedor-login .formulario-login{
+    width: 100%;
+    display: contents;
+}
+.card-login .contenedor-login .formulario-login .login-control{
+    margin-top: 10px;
+}
+
+.card-login .contenedor-login h1 {
+    margin: 0 auto;
+    position: relative;
+    bottom: 30px;
+}
+
+.card-login .contenedor-login .formulario-login button
+{
+    margin-top: 35px;
+}
