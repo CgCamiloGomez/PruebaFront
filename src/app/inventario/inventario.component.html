@@ -1,5 +1,5 @@
 <mat-card class="card-inventario">
-    <div class="contendor-inventarios"> 
+    <div class="contendor-inventarios">
         <div class="contenedor-categorias">
             <h3>CATEGORIAS</h3>
             <div class="sub-content-categorias">
@@ -7,18 +7,22 @@
                     <input matInput placeholder="Search">
                     <mat-icon matSuffix>search</mat-icon>
                 </mat-form-field>
-                <button mat-raised-button color="primary">Add</button>
+                <button mat-raised-button color="primary" (click)="openDialog('Categoria')">Add</button>
             </div>
             <div class="contendor-list-categorias">
-
+                <mat-radio-group aria-labelledby="example-radio-group-label" class="example-radio-group">
+                    <mat-radio-button class="example-radio-button" *ngFor="let season of seasons" [value]="season">
+                        {{season}}
+                    </mat-radio-button>
+                </mat-radio-group>
             </div>
         </div>
-    
+
         <div class="contenedor-productos">
             <h3>PRODUCTOS</h3>
-            <button mat-raised-button color="primary">Add</button>
+            <button mat-raised-button color="primary" (click)="openDialog('Producto')">Add</button>
             <div class="contendor-list-productos">
-
+ 
             </div>
         </div>
 
@@ -29,4 +33,3 @@
         </div>
     </div>
 </mat-card>
-

@@ -1,0 +1,27 @@
+<h1 mat-dialog-title>Ingrese  {{data.nombre}}</h1>
+<div mat-dialog-content class="form-contenedor">
+  <mat-form-field>
+    <mat-label>Id {{data.nombre}}</mat-label>
+    <input matInput>
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Nombre {{data.nombre}}</mat-label>
+    <input matInput>
+  </mat-form-field>
+
+  <mat-form-field *ngIf="data.nombre=='Producto'">
+    <mat-label>Precio {{data.nombre}}</mat-label>
+    <input matInput>
+  </mat-form-field>
+
+  <mat-form-field *ngIf="data.nombre=='Producto'">
+    <mat-label>IVA {{data.nombre}}</mat-label>
+    <input matInput>
+  </mat-form-field>
+  
+</div>
+<div mat-dialog-actions class="btn-dialog">
+  <button mat-button (click)="onNoClick()">Cancelar</button>
+  <button mat-button cdkFocusInitial>Guardar</button>
+</div>
